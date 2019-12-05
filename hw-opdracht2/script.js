@@ -3,7 +3,18 @@ function zoekUit() {
     var duur =  document.getElementById("duur").value;
     var streaming = document.getElementById("streaming").value;
 
-    var abonnement ="eenvoudig";
+    var abonnement =document.getElementById("resultaat").innerHTML;
+
+    
+    if (aantal==3 && duur>3) {
+        document.getElementById("resultaat").innerHTML= "familie";
+        
+    }
+
+    if (aantal>=2 && streaming==true) {
+        document.getElementById("resultaat").innerHTML= "uitgebreid";
+    }
+
 //als je met meer dan 2 personen kijkt en meer dan 3 uur per dag, dan is het beste abonnement familie
 //pseudocode: als (aantal==3 en duur>3 dan abonnement ="familie")
 
